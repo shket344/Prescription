@@ -3,6 +3,7 @@
 require_relative '../lib/reader'
 require_relative '../lib/data_collector'
 require_relative '../lib/drug_counter'
+require_relative '../lib/total_income'
 require_relative '../lib/performance'
 
 unless ARGV.any?
@@ -10,4 +11,4 @@ unless ARGV.any?
   exit
 end
 
-Performance.call(Reader, ARGV.first, DataCollector, DrugCounter)
+Performance.call(Reader, ARGV.first, DataCollector, DrugCounter, TotalIncome)
