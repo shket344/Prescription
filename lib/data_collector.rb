@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'application'
 
 class DataCollector < Application
@@ -14,8 +16,8 @@ class DataCollector < Application
   private
 
   def collect_data
-    hash = Hash.new
-    data.split(/\n/).each do |str|
+    hash = {}
+    data.split("\n").each do |str|
       patient_name, drug_name, event_name = str.split(/\s+/)
       hasherize!(hash, patient_name, drug_name, [event_name])
     end
@@ -24,10 +26,11 @@ class DataCollector < Application
   end
 
   def hasherize!(hash, patient_name, drug_name, event_name)
-    unless hash[patient_name]
-      hash[patient_name] = { drug_name => event_name }
+    if hash[patient_name]
+      hash[patient_name][drug_name] =
+        hash[patient_name][drug_name] ? hash[patient_name][drug_name] + event_name : event_name
     else
-      hash[patient_name][drug_name] = hash[patient_name][drug_name] ? hash[patient_name][drug_name] + event_name : event_name
+      hash[patient_name] = { drug_name => event_name }
     end
   end
 end

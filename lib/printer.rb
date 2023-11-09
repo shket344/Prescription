@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'application'
 
 class Printer < Application
@@ -16,7 +18,7 @@ class Printer < Application
   def print_data
     data.each do |key, value|
       filled, income = value
-      prefix = income < 0 ? '-' : ''
+      prefix = income.negative? ? '-' : ''
       p "#{key}: #{filled} fills #{prefix}$#{income.abs} income"
     end
   end
