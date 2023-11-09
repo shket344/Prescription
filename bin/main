@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/reader'
+require_relative '../lib/data_collector'
 require_relative '../lib/performance'
 
 unless ARGV.any?
@@ -8,4 +9,4 @@ unless ARGV.any?
   exit
 end
 
-Performance.call(Reader, ARGV.first)
+Performance.call(Reader, ARGV.first, DataCollector)
