@@ -1,10 +1,11 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/reader'
+require_relative '../lib/performance'
 
 unless ARGV.any?
   warn 'Please, write file name'
   exit
 end
 
-Reader.call(ARGV.first)
+Performance.call(Reader, ARGV.first)
