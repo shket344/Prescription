@@ -63,6 +63,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  byebug
   pry-byebug
   rspec
   rubocop
