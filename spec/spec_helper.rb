@@ -3,7 +3,7 @@
 require 'simplecov'
 require 'pry'
 
-SimpleCov.start
+# SimpleCov.start
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
