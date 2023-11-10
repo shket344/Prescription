@@ -13,7 +13,7 @@ describe DataCollector do
       end
 
       it 'returns counted data' do
-        expect(subject).to eq 'expected_result'
+        expect(subject).to eq expected_result
       end
     end
   end
