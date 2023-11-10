@@ -12,7 +12,7 @@ describe DataCollector do
         { 'Nick' => { 'A' => %w[created filled] }, 'Mark' => { 'B' => %w[filled filled] } }
       end
 
-      it 'returns collected data by name and drug' do
+      it 'returns counted data' do
         expect(subject).to eq expected_result
       end
     end
