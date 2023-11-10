@@ -2,6 +2,9 @@ AllCops:
   NewCops: enable
   SuggestExtensions: false
 
+Lint/EmptyBlock:
+  Enabled: false
+
 Lint/MissingSuper:
   Enabled: false
 
