@@ -10,9 +10,12 @@ describe Printer do
       let(:data) do
         { 'Nick' => [3, 8], 'Mark' => [0, 0] }
       end
+      let(:expected_output) do
+        "\"Nick: 3 fills $8 income\"\n\"Mark: 0 fills $0 income\"\n"
+      end
 
       it 'print results' do
-        expect { subject }.to output("\"Nick: 3 fills $8 income\"\n\"Mark: 0 fills $0 income\"\n").to_stdout
+        expect { subject }.to output(expected_output).to_stdout
       end
     end
   end
