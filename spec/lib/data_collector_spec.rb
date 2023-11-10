@@ -13,7 +13,7 @@ describe DataCollector do
       end
 
       it 'returns collected data by name and drug' do
-        expect(subject).to eq 'expected_result'
+        expect(subject).to eq expected_result
       end
     end
   end
