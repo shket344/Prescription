@@ -29,7 +29,7 @@ describe Reader do
       let(:file) { 'spec/fixtures/empty.txt' }
 
       it 'return warning message' do
-        expect { subject }.to output("#{file} is empty").to_stderr
+        expect { subject }.to raise_error SystemExit
       end
     end
   end

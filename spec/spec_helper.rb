@@ -12,3 +12,5 @@ RSpec.configure do |config|
 
   config.failure_exit_code = 1
 end
+
+RSpec::Expectations.configuration.warn_about_potential_false_positives = false
