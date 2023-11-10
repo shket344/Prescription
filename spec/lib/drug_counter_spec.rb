@@ -11,7 +11,7 @@ describe DrugCounter do
         { 'Nick' => { 'A' => %w[created filled] }, 'Mark' => { 'B' => %w[filled filled] } }
       end
       let(:expected_result) do
-        {"Nick"=>[[1, 5]], "Mark"=>[[0, 0]]}
+        { 'Nick' => [[1, 5]], 'Mark' => [[0, 0]] }
       end
 
       it 'returns collected data by name and drug' do
