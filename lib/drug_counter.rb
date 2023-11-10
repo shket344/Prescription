@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'application'
 
 class DrugCounter < Application
@@ -39,6 +41,6 @@ class DrugCounter < Application
   end
 
   def total_count(returned, filled)
-    [filled, (filled * 5 - returned)]
+    [filled, ((filled * 5) - returned)]
   end
 end

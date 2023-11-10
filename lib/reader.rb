@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'application'
 
 class Reader < Application
@@ -10,12 +12,12 @@ class Reader < Application
   def call
     raise StandardError unless File.exist?(file_path)
 
-    is_empty(File.read(file_path))
+    empty?(File.read(file_path))
   end
 
   private
 
-  def is_empty(file)
+  def empty?(file)
     return file unless file.empty?
 
     warn "#{file_path} is empty"
