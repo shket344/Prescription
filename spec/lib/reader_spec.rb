@@ -28,7 +28,7 @@ describe Reader do
     context 'when file is empty' do
       let(:file) { 'spec/fixtures/empty.txt' }
 
-      it 'raise StandardError' do
+      it 'return warning message' do
         expect { subject }.to output("#{file} is empty").to_stderr
       end
     end
