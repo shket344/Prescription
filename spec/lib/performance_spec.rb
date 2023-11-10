@@ -19,7 +19,12 @@ describe Performance do
       let(:total_income) { TotalIncome }
       let(:printer) { Printer }
       let(:expected_output) do
-        "\"Nick: 1 fills $5 income\"\n\"Mark: 1 fills $5 income\"\n"
+        "\"Nick: 1 fills $5 income\"\n\"Mark: 0 fills $0 income\"\n"
+      end
+
+      before do
+        allow(Reader).to receive(:call).with(file_path)
+                                       .and_return("Nick A created\nNick A filled\nMark B filled\nMark B filled\n")
       end
 
       it 'performs all classes and print results' do
