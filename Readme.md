@@ -28,6 +28,11 @@ $ chmod +x bin/main
 
 $ bin/main public/pharmacy_system.txt
 
+
+#### Running the tests:
+
+$ rspec
+
 ## Folders
 
 ### Bin Folder:
@@ -47,3 +52,18 @@ $ bin/main public/pharmacy_system.txt
 ### Public Folder:
 
 - pharmacy_system.txt - the file with the sample of input data.
+
+### Spec Folder:
+
+#### Bin:
+
+- Integration test for script
+
+#### Lib:
+
+- Unit tests for all files
+
+#### Fixtures:
+
+- empty.txt for test case with empty file
+- test.txt for success cases
