@@ -10,9 +10,7 @@ RSpec.configure do |config|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 
-  config.exit_code do |exit_code|
-    exit_code.number_failures
-  end
+  config.failure_exit_code = 1
 
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
